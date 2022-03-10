@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px auto;
+        }
+        body{
+            background-image: url(../hinhanh/background1.jpg)
+        }
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: aqua;
+        }
+        nav{
+            height: 50px;
+            width: 1089px;
+            background-color: rgb(204, 58, 155);
+        }
+        header{
+            height: 150px;
+            width: 1089px;
+            background-image: url(../hinhanh/background2.jpg);
+            text-align: center;
+            line-height: 150px;
+            font-size: 100px;
+            color: rgb(231, 105, 114);
+        }
+        .content{
+            height: 400px;
+            width: 1089px;
+            background-color: blueviolet;
+        }
+        aside{
+            height: 400px;
+            width: 400px;
+            background-color: coral;
+            float: left;
+        }
+        section{
+            height: 400px;
+            width:  689px;
+            background-color: brown;
+            float: left;
+        }
+        footer{
+            height: 200px;
+            width: 1089px;
+            background-color: darkgreen;
+        }
+        .menu li{
+            float: left;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            list-style: none;
+            text-indent: 20px;
+            background-color: darksalmon;
+            position: relative;
+        }
+        a{
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: blue;
+        }
+        li:hover>a{
+            color: rgb(20, 243, 12);
+            font-style: italic;
+        }
+        .menu li .submenu{
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu{
+            display: block;
+        }
+        nav span #txtEmail {
+            padding: 3px;
+            color: rgba(201, 27, 186, 0.603);
+        } 
+        nav span #btnGo {
+            padding: 3px;
+            color: gold;
+            border-radius: 50px;
+            text-shadow: 2px 2px 2px red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="menu">
+                <li><a href="https://iuh.edu.vn">HOME</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT</a>
+                    <ul class="submenu">
+                        <li><a href="">PHONE</a></li>
+                        <li><a href="">INTERNET</a></li>
+                        <li><a href="">TIVI</a></li>
+                    </ul>
+                </li>
+<li><a href="">ABOUT</a></li>
+                <li><a href="">HELP</a></li>
+            </ul>
+            <span>
+                <form action="dangky.php">
+                    <label for="lblEmail">Email: </label>
+                    <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhap Email">
+                    <input type="Submit" value="Go" id="btnGo">
+                </form>
+            </span>
+        </nav>
+        <header>TOI YEU VIET NAM</header>
+        <div class="content">
+            <aside>
+                <article>
+                    <h5 style="position:absolute; font-weight: bold; color: white;text-shadow: 10px 20px 20px plum;">GAME SHOW </h5>
+                    <img src="../hinhanh/HD1.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5>Hoạt động 2</h5>
+                    <img src="../hinhanh/HD2.jpg" alt="" srcset="">
+                </article>
+                <article>
+                    <h5>Hoạt động 3</h5>
+                    <img src="../hinhanh/hd3.jpg" alt="" srcset="">
+                </article>
+            </aside>
+            <section>
+                <form action="dangky.php">
+                    <fieldset>
+                        <legend>Thông tin của bạn</legend>
+                        <label for="lblHoTen">Họ Tên: </label>
+                        <input type="text" name="txtHT" id="txtHT" required placeholder="Nhập họ tên"> <br> <br>
+                        <label for="lblEmail">Email: </label>
+                        <input type="email" name="txtEmail" id="txtEmail" required placeholder="Nhập email"> <br> <br>
+                        <label for="lblNS">Ngày Sinh</label>
+                        <input type="date" name="txtNS" id="txtNS" required placeholder="Ngày Sinh"> <br> <br>
+                        <label for="lblGT">Giới Tính</label>
+                        <input type="radio" name="radNam" id="radNam" value="Nam" checked><label for="Nam">Nam</label>
+                        <input type="radio" name="radNu" id="radNu" value="Nữ" required><label for="Nữ">Nữ</label> <br> <br>
+                        <input type="submit" value="Go" id="btnGo">
+                    </fieldset>
+                </form>
+            </section>
+        </div>
